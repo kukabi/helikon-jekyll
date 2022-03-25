@@ -1,0 +1,18 @@
+{% if page.links %}
+    <div class="hstack align-items-center flex-wrap gap-14 mt-40 mt-md-60">
+        {% for link in page.links %}
+            {% if link.icon == "github" %}
+                <a class="btn btn-white btn-icon" href="{{ link.url }}" aria-label="{{ link.title }}">
+                    <img src="{{ "/assets/img/github-logo-sign.svg" | relative_url }}" alt="Github logo" />
+                </a>
+            {% else %}
+                <a class="btn btn-white px-16 text-md" href="{{ link.url }}">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="{{ "/assets/img/sprite.svg#link" | relative_url }}"></use>
+                    </svg>
+                    <span>{{ link.title }}</span>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

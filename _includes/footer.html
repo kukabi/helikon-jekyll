@@ -1,0 +1,87 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__content">
+                <h2>Founder</h2>
+                <div class="row mt-40">
+                    <div class="col">
+                        <div class="d-flex flex-column flex-xl-row gap-30 gap-sm-40">
+                            <div class="footer__avatar">
+                                <div></div>
+                            </div>
+                            <div>
+                                <div class="text text-md">
+                                    Coming from a Computer Science background with nearly 20 years of software industry
+                                    experience, Kutsal was introduced to the blockchain space in 2019. His past work as
+                                    a developer and leader covers a multitude of enterprise and startup projects in
+                                    multiple settings from defence industry to fintech startups and microchip and
+                                    sensors development for art installations. He has been working since early 2021 to
+                                    deliver high-quality software products and validator services for the Polkadot
+                                    ecosystem.
+                                </div>
+                                <div class="hstack gap-14 align-items-baseline mt-30 mt-sm-40">
+                                    <div class="h4">Kutsal K. Bilgin,</div>
+                                    <span class="text-sm">Founder</span>
+                                </div>
+                                <div class="hstack gap-14 align-items-center mt-12">
+                                    {% if site.author_github %}
+                                        <a class="btn btn-secondary btn-icon" href="{{ site.author_github }}" aria-label="Github link">
+                                            <img src="{{ "/assets/img/github-logo-sign.svg" | relative_url }}" alt="Github logo" />
+                                        </a>
+                                    {% endif %}
+                                    {% if site.author_email %}
+                                        <a class="link text-md" href="mailto:{{ site.author_email }}">{{ site.author_email }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mt-30 mt-sm-40 mt-xl-0">
+                        <div class="hstack flex-wrap gap-14 align-items-center">
+                            {% if site.kusama %}
+                                <a class="btn btn-secondary py-9 px-16 text-md" href="{{ site.kusama }}">
+                                    <img src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
+                                         alt="Kusama logotype" />
+                                    <span>Kusama</span>
+                                </a>
+                            {% endif %}
+                            {% if site.polkadot %}
+                                <a class="btn btn-secondary py-9 px-16 text-md" href="{{ site.polkadot }}">
+                                    <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}"
+                                         alt="Polkadot logotype" />
+                                    <span>Polkadot</span>
+                                </a>
+                            {% endif %}
+                            {% if site.github %}
+                                <a class="btn btn-secondary btn-icon" href="{{ site.github }}" aria-label="Github link">
+                                    <img src="{{ "/assets/img/github-logo-sign.svg" | relative_url }}" alt="Github logo" />
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="row mt-30 mt-sm-40">
+                            {% if site.address %}
+                                <div class="col-md-6 col-xl-12 text text-md">
+                                    <p>{{ site.address }}</p>
+                                </div>
+                            {% endif %}
+                            <div
+                                class="col-md-6 col-xl-12 vstack align-items-start gap-12 text-md mt-24 mt-sm-30 mt-md-0 mt-xl-30">
+                                {% if site.phone %}
+                                    <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+                                {% endif %}
+                                {% if site.email %}
+                                    <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="hstack flex-wrap gap-12 justify-content-between mt-40 mt-sm-60 pt-20 pt-sm-20 border-top text-secondary text">
+                    <span>&copy; Helikon. All rights reserved.</span>
+                    <a href="/policy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

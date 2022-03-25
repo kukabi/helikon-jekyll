@@ -1,0 +1,147 @@
+---
+layout: default
+title: Helikon product page
+description: Helikon product page description
+---
+
+{% include header.html %}
+
+<main class="section mt-40 overflow-hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <a class="btn btn-white btn-xs mb-24" href="/">back</a>
+                <div class="product-item product-item--no-hover w-100 h-auto product-item--style-{{ page.cssClass }} mb-40 mb-md-60">
+                    <div class="product-item__content">
+                        {% if page.logotype %}
+                            <img class="product-item__logotype" src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.cssClass | append: "-logo.svg" | relative_url }}" alt="{{ page.title }} logotype" />
+                        {% else %}
+                            <h4>{{ page.title }}</h4>
+                        {% endif %}
+                        <div class="product-item__description text text-sm mt-30 mt-md-40">
+                            {{ page.description | markdownify }}
+                        </div>
+                        <div class="product-item__panel hstack flex-wrap gap-14 align-items-center mt-40 mt-md-80">
+                            {% for link in page.links %}
+                                {% if link.icon == "github" %}
+                                    <a class="btn btn-white btn-icon btn-sm py-9 px-16 text-sm" href="{{ link.url }}" aria-label="{{ link.title }}">
+                                        <img src="{{ "/assets/img/github-logo-sign.svg" | relative_url }}" alt="Github logo" />
+                                    </a>
+                                {% elsif link.icon == "kusama" %}
+                                    <a class="btn btn-white btn-sm py-8 px-16 text-sm" href="{{ link.url }}">
+                                        <img src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
+                                             alt="Kusama logotype" />
+                                        <span>{{ link.title }}</span>
+                                    </a>
+                                {% elsif link.icon == "polkadot" %}
+                                    <a class="btn btn-white btn-sm py-8 px-16 text-sm" href="{{ link.url }}">
+                                        <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}"
+                                             alt="Polkadot logotype" />
+                                        <span>{{ link.title }}</span>
+                                    </a>
+                                {% else %}
+                                    <a class="btn btn-white btn-sm py-10 px-16 text-sm" href="{{ link.url }}">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="{{ "/assets/img/sprite.svg#link" | relative_url }}"></use>
+                                        </svg>
+                                        <span>{{ link.title }}</span>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                            {% for supported in page.supported %}
+                                <a class="{% if forloop.first %}ms-auto{% endif %}" href="{{ supported.url }}">
+                                    <img src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: supported.icon | relative_url }}" alt="{{ supported.title }} logo" />
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% if page.shape %}
+                        <div class="product-item__shape">
+                            {% if page.shape.invert %}
+                                <div>
+                                    <img
+                                            src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
+                                            alt="{{ page.title }} shape"
+                                            aria-hidden="true"
+                                            width="400"
+                                            height="400" />
+                                </div>
+                            {% endif %}
+                            <img
+                                    src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
+                                    alt="{{ page.title }} shape"
+                                    aria-hidden="true"
+                                    width="400"
+                                    height="400" />
+                        </div>
+                    {% endif %}
+                </div>
+                <h1 class="h3 mb-20 mb-md-40">{{ page.title }}</h1>
+                <div class="raw text text-md">
+                    {{ content }}
+                </div>
+                {% include links.html %}
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-120 mt-xxl-180 position-relative">
+        <lottie-player class="updates__bg" src="{{ "/assets/files/hero.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <h3>Recent Updates</h3>
+                    <div class="text text-md mt-40">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="mt-40">
+                        <div class="vstack gap-20">
+                            <div class="updates-item">
+                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                    <h6>Update Name</h6>
+                                    <span class="updates-item__date">29th November 2020</span>
+                                </div>
+                                <div class="text text-xs mt-16">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="updates-item">
+                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                    <h6>Update Name</h6>
+                                    <span class="updates-item__date">29th November 2020</span>
+                                </div>
+                                <div class="text text-xs mt-16">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="updates-item">
+                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                    <h6>Update Name</h6>
+                                    <span class="updates-item__date">29th November 2020</span>
+                                </div>
+                                <div class="text text-xs mt-16">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-40">
+                        <button class="btn btn-white btn-xs" type="button">more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
