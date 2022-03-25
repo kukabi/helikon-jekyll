@@ -2,6 +2,7 @@
 layout: product
 title: SubVT
 meta_description: SubVT page description
+sort_order: 1
 cssClass: subvt
 logotype: true
 description: |

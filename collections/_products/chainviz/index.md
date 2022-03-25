@@ -2,6 +2,7 @@
 layout: product
 title: ChainViz
 meta_description: ChainViz page description
+sort_order: 3
 cssClass: chainviz
 description: |
     ChainViz is a real-time 3D chain visualization web application for Kusama.

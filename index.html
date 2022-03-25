@@ -87,7 +87,8 @@ description: Helikon home page
             <h2>Products</h2>
             <div class="swiper products__carousel mt-40 mt-md-60" id="productsCarousel">
                 <div class="swiper-wrapper">
-                    {% for product in site.products %}
+                    {% assign products = site.products | sort: "sort_order" %}
+                    {% for product in products %}
                         <div class="swiper-slide">
                             <div class="product-item product-item--style-{{ product.cssClass }}">
                                 <div class="product-item__content">
@@ -261,10 +262,7 @@ description: Helikon home page
                                         Stake
                                     </button>
                                 </div>
-                                <div class="validator-item__shape">
-                                    <img src="{{ "/assets/img/validators/1.svg" | relative_url }}" alt="Validator shape"
-                                         aria-hidden="true" />
-                                </div>
+                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator2.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -326,10 +324,7 @@ description: Helikon home page
                                         Stake
                                     </button>
                                 </div>
-                                <div class="validator-item__shape">
-                                    <img src="{{ "/assets/img/validators/2.svg" | relative_url }}" alt="Validator shape"
-                                         aria-hidden="true" />
-                                </div>
+                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator1.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
                             </div>
                         </div>
                     </div>
@@ -398,10 +393,7 @@ description: Helikon home page
                                         Stake
                                     </button>
                                 </div>
-                                <div class="validator-item__shape">
-                                    <img src="{{ "/assets/img/validators/1.svg" | relative_url }}" alt="Validator shape"
-                                         aria-hidden="true" />
-                                </div>
+                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator2.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -463,10 +455,7 @@ description: Helikon home page
                                         Stake
                                     </button>
                                 </div>
-                                <div class="validator-item__shape">
-                                    <img src="{{ "/assets/img/validators/2.svg" | relative_url }}" alt="Validator shape"
-                                         aria-hidden="true" />
-                                </div>
+                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator1.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
                             </div>
                         </div>
                     </div>

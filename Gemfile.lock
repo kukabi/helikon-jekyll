@@ -276,7 +276,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  github-pages
+  github-pages (~> 225)
   http_parser.rb (~> 0.6.0)
   tzinfo (~> 1.2)
   tzinfo-data

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-baseurl: "/helikon-jekyll/"
+baseurl: "/helikon-jekyll"
 url: "https://vshepel.github.io"
 permalink: none
 
@@ -38,7 +38,4 @@ collections_dir: collections
 collections:
   products:
     output: true
-    order:
-      - subvt/index.md
-      - 1kv/index.md
-      - chainviz/index.md
+    permalink: /:path

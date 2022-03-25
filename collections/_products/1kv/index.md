@@ -2,6 +2,7 @@
 layout: product
 title: 1KV Telegram Bot
 meta_description: 1KV Telegram Bot page description
+sort_order: 2
 cssClass: 1kv
 description: |
     A telegram bot for the validators enrolled in the Polkadot and Kusama Thousand Validators (1KV) Programme. You may find Polkadot bot available for chat [here](/here), and the Kusama bot [here](/here).
