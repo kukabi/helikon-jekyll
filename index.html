@@ -5,7 +5,10 @@ description: Helikon home page
 ---
 
 <section class="hero">
-    <img class="hero__bg" src="{{ "/assets/img/hero-bg.gif" | relative_url }}" alt="Hero background" aria-hidden="true" />
+    <video class="hero__bg" autoplay loop muted playsinline>
+        <source src="{{ "/assets/files/hero-bg.webm" | relative_url }}" type="video/webm" />
+        <source src="{{ "/assets/files/hero-bg.mp4" | relative_url }}" type="video/mp4" />
+    </video>
     <div class="container d-flex flex-column align-items-center">
         <a class="hero__logo flex-shrink-0" href="/" aria-label="Helikon home page">
             <img src="{{ "/assets/img/helikon-logo-sign.svg" | relative_url }}" alt="Helikon logotype" width="124"
@@ -164,7 +167,10 @@ description: Helikon home page
 {% endif %}
 
 <section class="section validators_section" id="validators">
-    <img class="validators__bg" src="{{ "/assets/img/validators-bg.gif" | relative_url }}" alt="Validators background" aria-hidden="true" />
+    <video class="validators__bg" autoplay loop muted playsinline>
+        <source src="{{ "/assets/files/validators-bg.webm" | relative_url }}" type="video/webm" />
+        <source src="{{ "/assets/files/validators-bg.mp4" | relative_url }}" type="video/mp4" />
+    </video>
     <div class="container">
         <h2 class="text-center">Validators</h2>
         <div class="validators__nav nav hstack gap-20 gap-md-24 justify-content-center mt-40 mt-md-60">
@@ -516,7 +522,7 @@ description: Helikon home page
         aria-labelledby="modalValidatorLabel"
         aria-hidden="true"
         tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <button class="btn btn-link btn-close" data-bs-dismiss="modal" type="button">close</button>
             <div class="modal-body p-20 p-md-40">
