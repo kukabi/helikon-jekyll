@@ -264,7 +264,7 @@ description: Helikon home page
                                 </div>
                                 <lottie-player
                                     class="validator-item__shape"
-                                    src="{{ "/assets/files/validator1.min.json" | relative_url }}"
+                                    src="{{ "/assets/files/validator1.json" | relative_url }}"
                                     autoplay
                                     loop
                                     mode="normal"></lottie-player>
@@ -331,7 +331,7 @@ description: Helikon home page
                                 </div>
                                 <lottie-player
                                     class="validator-item__shape"
-                                    src="{{ "/assets/files/validator2.min.json" | relative_url }}"
+                                    src="{{ "/assets/files/validator2.json" | relative_url }}"
                                     autoplay
                                     loop
                                     mode="normal"></lottie-player>
@@ -405,7 +405,7 @@ description: Helikon home page
                                 </div>
                                 <lottie-player
                                     class="validator-item__shape"
-                                    src="{{ "/assets/files/validator3.min.json" | relative_url }}"
+                                    src="{{ "/assets/files/validator3.json" | relative_url }}"
                                     autoplay
                                     loop
                                     mode="normal"></lottie-player>
@@ -472,7 +472,7 @@ description: Helikon home page
                                 </div>
                                 <lottie-player
                                     class="validator-item__shape"
-                                    src="{{ "/assets/files/validator4.min.json" | relative_url }}"
+                                    src="{{ "/assets/files/validator4.json" | relative_url }}"
                                     autoplay
                                     loop
                                     mode="normal"></lottie-player>
@@ -598,84 +598,112 @@ description: Helikon home page
                                 <button class="btn btn-primary w-100" type="button">Connect Wallet</button>
                             </div>
                         </div>
-                        <div class="grid gap-14 p-20 bg-light rounded mt-40">
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                        <div class="grid p-20 bg-light rounded mt-40 gap-14">
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Remove
-                                </button>
+                                <img class="col-auto" src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Remove
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MMELIDA</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Remove
-                                </button>
+                                <img class="col-auto" src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Remove
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div class="grid gap-14 p-20 border rounded mt-24">
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Pineapplexpress</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                        <div class="grid p-20 border rounded mt-24 gap-14">
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Pineapplexpress</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Name Validator</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">PFkQ5QUklrY8tvcW</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Name Validator</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">PFkQ5QUklrY8tvcW</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -695,7 +723,7 @@ description: Helikon home page
                             </div>
                             <div class="col-lg-4 mt-20 mt-lg-0">
                                 <button class="btn btn-primary w-100" type="button" disabled>
-                                    Submitting
+                                    <span>Submitting</span>
                                     <span
                                         class="spinner-border spinner-border-sm"
                                         role="status"
@@ -703,84 +731,112 @@ description: Helikon home page
                                 </button>
                             </div>
                         </div>
-                        <div class="grid p-20 bg-light rounded mt-40" style="--bs-gap: 14px">
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                        <div class="grid p-20 bg-light rounded mt-40 gap-14">
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Remove
-                                </button>
+                                <img class="col-auto" src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Remove
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MMELIDA</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Remove
-                                </button>
+                                <img class="col-auto" src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Remove
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div class="grid p-20 border rounded mt-24" style="--bs-gap: 14px">
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Pineapplexpress</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                        <div class="grid p-20 border rounded mt-24 gap-14">
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Pineapplexpress</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Name Validator</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">PFkQ5QUklrY8tvcW</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">Name Validator</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
-                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
-                                <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack g-4">
-                                    <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                            <div class="g-col-12 row gx-14 gx-lg-20 align-items-center text-sm">
+                                <span class="col text-truncate">PFkQ5QUklrY8tvcW</span>
+                                <div class="col-auto">
+                                    <div class="hstack g-4">
+                                        <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
+                                        <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    </div>
                                 </div>
-                                <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
-                                    Nominate
-                                </button>
+                                <div class="col-auto">
+                                    <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
+                                        Nominate
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
