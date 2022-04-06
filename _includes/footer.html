@@ -5,8 +5,8 @@
                 <h2>Founder</h2>
                 <div class="row mt-40">
                     <div class="col">
-                        <div class="d-flex flex-column flex-xl-row gap-30 gap-sm-40">
-                            <div class="footer__avatar">
+                        <div class="d-flex flex-column flex-xl-row">
+                            <div class="footer__avatar mb-30 mb-sm-40 me-xl-40">
                                 <div></div>
                             </div>
                             <div>
@@ -19,11 +19,11 @@
                                     deliver high-quality software products and validator services for the Polkadot
                                     ecosystem.
                                 </div>
-                                <div class="hstack gap-14 align-items-baseline mt-30 mt-sm-40">
+                                <div class="hstack g-14 align-items-baseline mt-16 mt-sm-24">
                                     <div class="h4">Kutsal K. Bilgin,</div>
                                     <span class="text-sm">Founder</span>
                                 </div>
-                                <div class="hstack gap-14 align-items-center mt-12">
+                                <div class="hstack g-14 align-items-center mt-4">
                                     {% if site.author_github %}
                                         <a class="btn btn-secondary btn-icon" href="{{ site.author_github }}" aria-label="Github link">
                                             <img src="{{ "/assets/img/github-logo-sign.svg" | relative_url }}" alt="Github logo" />
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-xl-4 mt-30 mt-sm-40 mt-xl-0">
-                        <div class="hstack flex-wrap gap-14 align-items-center">
+                        <div class="hstack flex-wrap g-14 align-items-center">
                             {% if site.kusama %}
                                 <a class="btn btn-secondary py-9 px-16 text-md" href="{{ site.kusama }}">
                                     <img src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
@@ -60,24 +60,26 @@
                         </div>
                         <div class="row mt-30 mt-sm-40">
                             {% if site.address %}
-                                <div class="col-md-6 col-xl-12 text text-md">
+                                <div class="col-md-6 col-xl-12 text text-md mb-24 mb-sm-30 mb-md-0 mb-xl-30">
                                     <p>{{ site.address }}</p>
                                 </div>
                             {% endif %}
                             <div
-                                class="col-md-6 col-xl-12 vstack align-items-start gap-12 text-md mt-24 mt-sm-30 mt-md-0 mt-xl-30">
-                                {% if site.phone %}
+                                class="col-md-6 col-xl-12 text-md">
+                                <div class="vstack align-items-start g-12">
+                                    {% if site.phone %}
                                     <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
-                                {% endif %}
-                                {% if site.email %}
+                                    {% endif %}
+                                    {% if site.email %}
                                     <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
-                                {% endif %}
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="hstack flex-wrap gap-12 justify-content-between mt-40 mt-sm-60 pt-20 pt-sm-20 border-top text-secondary text">
+                    class="hstack flex-wrap g-12 justify-content-between pt-20 pt-sm-20 border-top text-secondary text">
                     <span>&copy; Helikon. All rights reserved.</span>
                     <a href="{{ "/policy" | relative_url }}">Privacy Policy</a>
                 </div>

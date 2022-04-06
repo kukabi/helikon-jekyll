@@ -18,10 +18,10 @@ description: Helikon product page description
                         {% else %}
                             <h4>{{ page.title }}</h4>
                         {% endif %}
-                        <div class="product-item__description text text-sm mt-30 mt-md-40">
+                        <div class="product-item__description text text-sm mt-30 mt-md-40 mb-40 mb-md-80">
                             {{ page.description | markdownify }}
                         </div>
-                        <div class="product-item__panel hstack flex-wrap gap-14 align-items-center mt-40 mt-md-80">
+                        <div class="product-item__panel hstack flex-wrap g-14 align-items-center">
                             {% for link in page.links %}
                                 {% if link.icon == "github" %}
                                     <a class="btn btn-white btn-icon btn-sm py-9 px-16 text-sm" href="{{ link.url }}" aria-label="{{ link.title }}">
@@ -60,24 +60,24 @@ description: Helikon product page description
                             {% if page.shape.invert %}
                                 <div>
                                     <img
-                                            src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
-                                            alt="{{ page.title }} shape"
-                                            aria-hidden="true"
-                                            width="400"
-                                            height="400" />
+                                        src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
+                                        alt="{{ page.title }} shape"
+                                        aria-hidden="true"
+                                        width="400"
+                                        height="400" />
                                 </div>
                             {% endif %}
                             <img
-                                    src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
-                                    alt="{{ page.title }} shape"
-                                    aria-hidden="true"
-                                    width="400"
-                                    height="400" />
+                                src="{{ "/assets/img/projects/" | append: page.cssClass | append: "/" | append: page.shape.path | relative_url }}"
+                                alt="{{ page.title }} shape"
+                                aria-hidden="true"
+                                width="400"
+                                height="400" />
                         </div>
                     {% endif %}
                 </div>
                 <h1 class="h3 mb-20 mb-md-40">{{ page.title }}</h1>
-                <div class="raw text text-md">
+                <div class="raw text text-md mb-40 mb-md-60">
                     {{ content }}
                 </div>
                 {% include links.html %}
@@ -86,7 +86,10 @@ description: Helikon product page description
     </div>
 
     <div class="mt-120 mt-xxl-180 position-relative">
-        <lottie-player class="updates__bg" src="{{ "/assets/files/hero.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+        <video class="updates__bg" poster="{{ "/assets/img/hero-bg.jpg" | relative_url }}" autoplay loop muted playsinline>
+            <source src="{{ "/assets/files/hero-bg.webm" | relative_url }}" type="video/webm" />
+            <source src="{{ "/assets/files/hero-bg.mp4" | relative_url }}" type="video/mp4" />
+        </video>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
@@ -98,9 +101,9 @@ description: Helikon product page description
                         </p>
                     </div>
                     <div class="mt-40">
-                        <div class="vstack gap-20">
+                        <div class="vstack g-20">
                             <div class="updates-item">
-                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                <div class="d-flex flex-wrap g-20 align-items-start justify-content-between">
                                     <h6>Update Name</h6>
                                     <span class="updates-item__date">29th November 2020</span>
                                 </div>
@@ -112,7 +115,7 @@ description: Helikon product page description
                                 </div>
                             </div>
                             <div class="updates-item">
-                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                <div class="d-flex flex-wrap g-20 align-items-start justify-content-between">
                                     <h6>Update Name</h6>
                                     <span class="updates-item__date">29th November 2020</span>
                                 </div>
@@ -124,7 +127,7 @@ description: Helikon product page description
                                 </div>
                             </div>
                             <div class="updates-item">
-                                <div class="d-flex flex-wrap gap-20 align-items-start justify-content-between">
+                                <div class="d-flex flex-wrap g-20 align-items-start justify-content-between">
                                     <h6>Update Name</h6>
                                     <span class="updates-item__date">29th November 2020</span>
                                 </div>

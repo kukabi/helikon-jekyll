@@ -5,20 +5,17 @@ description: Helikon home page
 ---
 
 <section class="hero">
-    <video class="hero__bg" autoplay loop muted playsinline>
+    <video class="hero__bg" poster="{{ "/assets/img/hero-bg.jpg" | relative_url }}" autoplay loop muted playsinline>
         <source src="{{ "/assets/files/hero-bg.webm" | relative_url }}" type="video/webm" />
         <source src="{{ "/assets/files/hero-bg.mp4" | relative_url }}" type="video/mp4" />
     </video>
     <div class="container d-flex flex-column align-items-center">
         <a class="hero__logo flex-shrink-0" href="/" aria-label="Helikon home page">
-            <img src="{{ "/assets/img/helikon-logo-sign.svg" | relative_url }}" alt="Helikon logotype" width="124"
-                 height="124" />
+            <img src="{{ "/assets/img/helikon-logo-sign.svg" | relative_url }}" alt="Helikon logotype" width="124" height="124" />
         </a>
         <div class="hero__text flex-grow-1 py-60">
-            <h1>
-                We are
-                <span><img src="{{ "/assets/img/helikon-logo-name.svg" | relative_url }}" alt="Helikon name" width="231"
-                           height="37" /></span>, a crypto-native blockchain company from Istanbul.
+            <h1 class="mb-40">
+                We are <span><img src="{{ "/assets/img/helikon-logo-name.svg" | relative_url }}" alt="Helikon name" width="231" height="37" /></span>, a crypto-native blockchain company from Istanbul.
             </h1>
             <div class="hstack flex-wrap align-items-center justify-content-center gap-20 mt-40">
                 <a class="btn btn-primary btn-lg" href="#products">See our products</a>
@@ -36,7 +33,7 @@ description: Helikon home page
         <div class="about__grid">
             <div class="about-item about-item--style-squares" id="about-item-1">
                 <div class="about-item__content">
-                    <div class="text text-md">
+                    <div class="text text-md mb-20">
                         <p>
                             We build
                             <strong>beautiful, robust, open-source software</strong>
@@ -44,12 +41,12 @@ description: Helikon home page
                         </p>
                         <p>We are proudly supported by the Web3 Foundation and the Kusama Treasury.</p>
                     </div>
-                    <div class="hstack flex-wrap gap-24 gap-sm-40 mt-20">
+                    <div class="hstack flex-wrap g-24 g-sm-40">
                         <img
-                                src="{{ "/assets/img/kusama-logo-supported.svg" | relative_url }}"
-                                alt="Kusama logotype"
-                                width="130"
-                                height="45" />
+                            src="{{ "/assets/img/kusama-logo-supported.svg" | relative_url }}"
+                            alt="Kusama logotype"
+                            width="130"
+                            height="45" />
                         <img src="{{ "/assets/img/web3-logo-name.svg" | relative_url }}" alt="Web3 logotype" width="118"
                              height="45" />
                     </div>
@@ -58,13 +55,13 @@ description: Helikon home page
             </div>
             <div class="about-item about-item--style-validator" id="about-item-2">
                 <div class="about-item__content">
-                    <div class="hstack flex-wrap gap-20 mb-30 mb-sm-40">
+                    <div class="hstack flex-wrap g-20">
                         <img src="{{ "/assets/img/polkadot-logo-name.svg" | relative_url }}" alt="Polkadot logotype"
                              width="148" height="32" />
                         <img src="{{ "/assets/img/kusama-logo-name.svg" | relative_url }}" alt="Kusama logotype"
                              width="114" height="27" />
                     </div>
-                    <div class="text text-md">
+                    <div class="text text-md mt-30 mt-sm-40">
                         <p>
                             We run
                             <strong>secure and powerful</strong>
@@ -99,10 +96,10 @@ description: Helikon home page
                                         {% else %}
                                         <h4>{{ product.title }}</h4>
                                     {% endif %}
-                                    <div class="product-item__description text text-sm mt-30 mt-md-40">
+                                    <div class="product-item__description text text-sm mt-30 mt-md-40 mb-40">
                                         {{ product.description | markdownify }}
                                     </div>
-                                    <div class="product-item__panel hstack flex-wrap gap-14 align-items-center mt-40">
+                                    <div class="product-item__panel hstack flex-wrap g-14 align-items-center">
                                         {% for link in product.links %}
                                             {% if link.icon == "github" %}
                                                 <a class="btn btn-white btn-icon btn-sm py-9 px-16 text-sm" href="{{ link.url }}" aria-label="{{ link.title }}">
@@ -141,19 +138,19 @@ description: Helikon home page
                                         {% if product.shape.invert %}
                                             <div>
                                                 <img
-                                                        src="{{ "/assets/img/projects/" | append: product.cssClass | append: "/" | append: product.shape.path | relative_url }}"
-                                                        alt="{{ product.title }} shape"
-                                                        aria-hidden="true"
-                                                        width="400"
-                                                        height="400" />
+                                                    src="{{ "/assets/img/projects/" | append: product.cssClass | append: "/" | append: product.shape.path | relative_url }}"
+                                                    alt="{{ product.title }} shape"
+                                                    aria-hidden="true"
+                                                    width="400"
+                                                    height="400" />
                                             </div>
                                         {% endif %}
                                         <img
-                                                src="{{ "/assets/img/projects/" | append: product.cssClass | append: "/" | append: product.shape.path | relative_url }}"
-                                                alt="{{ product.title }} shape"
-                                                aria-hidden="true"
-                                                width="400"
-                                                height="400" />
+                                            src="{{ "/assets/img/projects/" | append: product.cssClass | append: "/" | append: product.shape.path | relative_url }}"
+                                            alt="{{ product.title }} shape"
+                                            aria-hidden="true"
+                                            width="400"
+                                            height="400" />
                                     </div>
                                 {% endif %}
                             </div>
@@ -167,72 +164,71 @@ description: Helikon home page
 {% endif %}
 
 <section class="section validators_section" id="validators">
-    <video class="validators__bg" autoplay loop muted playsinline>
+    <video class="validators__bg" poster="{{ "/assets/img/validators-bg.jpg" | relative_url }}" autoplay loop muted playsinline>
         <source src="{{ "/assets/files/validators-bg.webm" | relative_url }}" type="video/webm" />
         <source src="{{ "/assets/files/validators-bg.mp4" | relative_url }}" type="video/mp4" />
     </video>
     <div class="container">
-        <h2 class="text-center">Validators</h2>
-        <div class="validators__nav nav hstack gap-20 gap-md-24 justify-content-center mt-40 mt-md-60">
+        <h2 class="text-center mb-40 mb-md-60">Validators</h2>
+        <div class="validators__nav nav hstack g-20 g-md-24 justify-content-center">
             <button
-                    class="btn btn-white btn-lg py-8 px-16 active"
-                    data-bs-toggle="tab"
-                    data-bs-target="#kusama"
-                    type="button"
-                    role="tab"
-                    aria-controls="kusama"
-                    aria-selected="true">
+                class="btn btn-white btn-lg py-8 px-16 active"
+                data-bs-toggle="tab"
+                data-bs-target="#kusama"
+                type="button"
+                role="tab"
+                aria-controls="kusama"
+                aria-selected="true">
                 <img
-                        class="btn-invert"
-                        src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
-                        alt="Kusama logotype"
-                        width="32"
-                        height="32" />
+                    class="btn-invert"
+                    src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
+                    alt="Kusama logotype"
+                    width="32"
+                    height="32" />
                 <span>Kusama</span>
             </button>
             <button
-                    class="btn btn-white btn-lg py-8 px-16"
-                    data-bs-toggle="tab"
-                    data-bs-target="#polkadot"
-                    type="button"
-                    role="tab"
-                    aria-controls="polkadot"
-                    aria-selected="false">
-                <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}" alt="Polkadot logotype" width="32"
-                     height="32" />
+                class="btn btn-white btn-lg py-8 px-16"
+                data-bs-toggle="tab"
+                data-bs-target="#polkadot"
+                type="button"
+                role="tab"
+                aria-controls="polkadot"
+                aria-selected="false">
+                <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}" alt="Polkadot logotype" width="32" height="32" />
                 <span>Polkadot</span>
             </button>
         </div>
         <div class="validators__content tab-content mt-80 mt-md-120">
             <div class="tab-pane fade show active" id="kusama" role="tabpanel" aria-labelledby="kusama-tab">
                 <div class="swiper validators__carousel">
-                    <div class="swiper-wrapper justify-content-xl-center gap-xl-40">
+                    <div class="swiper-wrapper justify-content-xl-center">
                         <div class="swiper-slide">
                             <div class="validator-item">
                                 <div class="validator-item__content">
                                     <h4>ISTANBUL</h4>
-                                    <div class="vstack gap-12 text-sm my-30 my-md-40">
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                    <div class="grid gap-14 text-sm my-30 my-md-40">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Identity:</div>
                                             <div class="col">🏔️ HELIKON 🏔️ / ISTANBUL</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Address:</div>
                                             <div class="col">Cb3ZF5...M3XkGY (link)</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Active Since:</div>
                                             <div class="col">7th of January, 2021</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Location:</div>
                                             <div class="col">
-                                                <div class="d-inline-flex gap-4 align-items-center">
+                                                <div class="d-inline-flex g-4 align-items-center">
                                                     <button
-                                                            class="btn btn-link link"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#modalMap"
-                                                            type="button">
+                                                        class="btn btn-link link"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modalMap"
+                                                        type="button">
                                                         Istanbul
                                                     </button>
                                                     <svg class="icon" aria-hidden="true">
@@ -241,60 +237,65 @@ description: Helikon home page
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0 mt-16">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0 mt-16">
                                             <div class="col-sm-5 text-secondary">Eras Active:</div>
                                             <div class="col">64/128</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Blocks Produced:</div>
                                             <div class="col">173</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Distributed:</div>
                                             <div class="col">22.3452 KSM</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Earned:</div>
                                             <div class="col">11.5142 KSM</div>
                                         </div>
                                     </div>
                                     <button
-                                            class="btn btn-primary btn-lg"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalValidator"
-                                            type="button">
+                                        class="btn btn-primary btn-lg"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalValidator"
+                                        type="button">
                                         Stake
                                     </button>
                                 </div>
-                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator1.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+                                <lottie-player
+                                    class="validator-item__shape"
+                                    src="{{ "/assets/files/validator1.min.json" | relative_url }}"
+                                    autoplay
+                                    loop
+                                    mode="normal"></lottie-player>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="validator-item">
                                 <div class="validator-item__content">
                                     <h4>MELIDA</h4>
-                                    <div class="vstack gap-12 text-sm my-30 my-md-40">
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                    <div class="grid gap-14 text-sm my-30 my-md-40">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Identity:</div>
                                             <div class="col">🏔️ HELIKON 🏔️ / MELIDA</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Address:</div>
                                             <div class="col">Cb3ZF5...M3XkGY (link)</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Active Since:</div>
                                             <div class="col">7th of January, 2021</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Location:</div>
                                             <div class="col">
-                                                <div class="d-inline-flex gap-4 align-items-center">
+                                                <div class="d-inline-flex g-4 align-items-center">
                                                     <button
-                                                            class="btn btn-link link"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#modalMap"
-                                                            type="button">
+                                                        class="btn btn-link link"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modalMap"
+                                                        type="button">
                                                         Istanbul
                                                     </button>
                                                     <svg class="icon" aria-hidden="true">
@@ -303,32 +304,37 @@ description: Helikon home page
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0 mt-16">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0 mt-16">
                                             <div class="col-sm-5 text-secondary">Eras Active:</div>
                                             <div class="col">64/128</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Blocks Produced:</div>
                                             <div class="col">173</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Distributed:</div>
                                             <div class="col">22.3452 KSM</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Earned:</div>
                                             <div class="col">11.5142 KSM</div>
                                         </div>
                                     </div>
                                     <button
-                                            class="btn btn-primary btn-lg"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalValidator"
-                                            type="button">
+                                        class="btn btn-primary btn-lg"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalValidator"
+                                        type="button">
                                         Stake
                                     </button>
                                 </div>
-                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator2.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+                                <lottie-player
+                                    class="validator-item__shape"
+                                    src="{{ "/assets/files/validator2.min.json" | relative_url }}"
+                                    autoplay
+                                    loop
+                                    mode="normal"></lottie-player>
                             </div>
                         </div>
                     </div>
@@ -337,33 +343,33 @@ description: Helikon home page
             </div>
             <div class="tab-pane fade" id="polkadot" role="tabpanel" aria-labelledby="polkadot-tab">
                 <div class="swiper validators__carousel">
-                    <div class="swiper-wrapper justify-content-xl-center gap-xl-40">
+                    <div class="swiper-wrapper justify-content-xl-center">
                         <div class="swiper-slide">
                             <div class="validator-item">
                                 <div class="validator-item__content">
                                     <h4>ISTANBUL 1</h4>
-                                    <div class="vstack gap-12 text-sm my-30 my-md-40">
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                    <div class="grid gap-14 text-sm my-30 my-md-40">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Identity:</div>
                                             <div class="col">🏔️ HELIKON 🏔️ / ISTANBUL</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Address:</div>
                                             <div class="col">Cb3ZF5...M3XkGY (link)</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Active Since:</div>
                                             <div class="col">7th of January, 2021</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Location:</div>
                                             <div class="col">
-                                                <div class="d-inline-flex gap-4 align-items-center">
+                                                <div class="d-inline-flex g-4 align-items-center">
                                                     <button
-                                                            class="btn btn-link link"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#modalMap"
-                                                            type="button">
+                                                        class="btn btn-link link"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modalMap"
+                                                        type="button">
                                                         Istanbul
                                                     </button>
                                                     <svg class="icon" aria-hidden="true">
@@ -372,60 +378,65 @@ description: Helikon home page
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0 mt-16">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0 mt-16">
                                             <div class="col-sm-5 text-secondary">Eras Active:</div>
                                             <div class="col">64/128</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Blocks Produced:</div>
                                             <div class="col">173</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Distributed:</div>
                                             <div class="col">22.3452 KSM</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Earned:</div>
                                             <div class="col">11.5142 KSM</div>
                                         </div>
                                     </div>
                                     <button
-                                            class="btn btn-primary btn-lg"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalValidator"
-                                            type="button">
+                                        class="btn btn-primary btn-lg"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalValidator"
+                                        type="button">
                                         Stake
                                     </button>
                                 </div>
-                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator3.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+                                <lottie-player
+                                    class="validator-item__shape"
+                                    src="{{ "/assets/files/validator3.min.json" | relative_url }}"
+                                    autoplay
+                                    loop
+                                    mode="normal"></lottie-player>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="validator-item">
                                 <div class="validator-item__content">
                                     <h4>MELIDA 1</h4>
-                                    <div class="vstack gap-12 text-sm my-30 my-md-40">
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                    <div class="grid gap-14 text-sm my-30 my-md-40">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Identity:</div>
                                             <div class="col">🏔️ HELIKON 🏔️ / MELIDA</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Address:</div>
                                             <div class="col">Cb3ZF5...M3XkGY (link)</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Active Since:</div>
                                             <div class="col">7th of January, 2021</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Location:</div>
                                             <div class="col">
-                                                <div class="d-inline-flex gap-4 align-items-center">
+                                                <div class="d-inline-flex g-4 align-items-center">
                                                     <button
-                                                            class="btn btn-link link"
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#modalMap"
-                                                            type="button">
+                                                        class="btn btn-link link"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modalMap"
+                                                        type="button">
                                                         Istanbul
                                                     </button>
                                                     <svg class="icon" aria-hidden="true">
@@ -434,32 +445,37 @@ description: Helikon home page
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0 mt-16">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0 mt-16">
                                             <div class="col-sm-5 text-secondary">Eras Active:</div>
                                             <div class="col">64/128</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Blocks Produced:</div>
                                             <div class="col">173</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Distributed:</div>
                                             <div class="col">22.3452 KSM</div>
                                         </div>
-                                        <div class="row gx-8 gy-4 gy-sm-0">
+                                        <div class="g-col-12 row gx-8 gy-4 gy-sm-0">
                                             <div class="col-sm-5 text-secondary">Rewards Earned:</div>
                                             <div class="col">11.5142 KSM</div>
                                         </div>
                                     </div>
                                     <button
-                                            class="btn btn-primary btn-lg"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalValidator"
-                                            type="button">
+                                        class="btn btn-primary btn-lg"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalValidator"
+                                        type="button">
                                         Stake
                                     </button>
                                 </div>
-                                <lottie-player class="validator-item__shape" src="{{ "/assets/files/validator4.json" | relative_url }}" autoplay loop mode="normal"></lottie-player>
+                                <lottie-player
+                                    class="validator-item__shape"
+                                    src="{{ "/assets/files/validator4.min.json" | relative_url }}"
+                                    autoplay
+                                    loop
+                                    mode="normal"></lottie-player>
                             </div>
                         </div>
                     </div>
@@ -517,59 +533,58 @@ description: Helikon home page
 </div>
 
 <div
-        class="modal fade"
-        id="modalValidator"
-        aria-labelledby="modalValidatorLabel"
-        aria-hidden="true"
-        tabindex="-1">
+    class="modal fade"
+    id="modalValidator"
+    aria-labelledby="modalValidatorLabel"
+    aria-hidden="true"
+    tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <button class="btn btn-link btn-close" data-bs-dismiss="modal" type="button">close</button>
             <div class="modal-body p-20 p-md-40">
-                <div class="nav hstack gap-14 align-items-center">
+                <div class="nav hstack g-14 align-items-center">
                     <button
-                            class="btn btn-outline py-8 px-16 active"
-                            data-bs-toggle="tab"
-                            data-bs-target="#kusamaModal"
-                            type="button"
-                            role="tab"
-                            aria-controls="kusamaModal"
-                            aria-selected="true">
+                        class="btn btn-outline py-8 px-16 active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#kusamaModal"
+                        type="button"
+                        role="tab"
+                        aria-controls="kusamaModal"
+                        aria-selected="true">
                         <img
-                                class="btn-invert"
-                                src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
-                                alt="Kusama logotype"
-                                width="24"
-                                height="24" />
+                            class="btn-invert"
+                            src="{{ "/assets/img/kusama-logo-sign.svg" | relative_url }}"
+                            alt="Kusama logotype"
+                            width="24"
+                            height="24" />
                         <span>Kusama</span>
                     </button>
                     <button
-                            class="btn btn-outline py-8 px-16"
-                            data-bs-toggle="tab"
-                            data-bs-target="#polkadotModal"
-                            type="button"
-                            role="tab"
-                            aria-controls="polkadotModal"
-                            aria-selected="false">
-                        <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}" alt="Polkadot logotype"
-                             width="24" height="24" />
+                        class="btn btn-outline py-8 px-16"
+                        data-bs-toggle="tab"
+                        data-bs-target="#polkadotModal"
+                        type="button"
+                        role="tab"
+                        aria-controls="polkadotModal"
+                        aria-selected="false">
+                        <img src="{{ "/assets/img/polkadot-logo-sign.svg" | relative_url }}" alt="Polkadot logotype" width="24" height="24" />
                         <span>Polkadot</span>
                     </button>
-                    <div class="hstack gap-10 align-items-center text-success ms-lg-auto">
+                    <div class="hstack g-10 align-items-center text-success ms-lg-auto">
                         <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Checked icon" />
                         Transaction is Successful
                     </div>
-                    <!--<div class="hstack gap-10 align-items-center text-danger ms-lg-auto">-->
+                    <!--<div class="hstack g-10 align-items-center text-danger ms-lg-auto">-->
                     <!--    <img src="{{ "/assets/img/svg/error-fill.svg" | relative_url }}" alt="Error icon">-->
                     <!--    Transaction Failed-->
                     <!--</div>-->
                 </div>
                 <div class="tab-content mt-40">
                     <div
-                            class="tab-pane fade show active"
-                            id="kusamaModal"
-                            role="tabpanel"
-                            aria-labelledby="kusamaModal-tab">
+                        class="tab-pane fade show active"
+                        id="kusamaModal"
+                        role="tabpanel"
+                        aria-labelledby="kusamaModal-tab">
                         <div class="row gx-20">
                             <div class="col">
                                 <select class="form-select">
@@ -583,31 +598,27 @@ description: Helikon home page
                                 <button class="btn btn-primary w-100" type="button">Connect Wallet</button>
                             </div>
                         </div>
-                        <div class="vstack gap-14 p-20 bg-light rounded mt-40">
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                        <div class="grid gap-14 p-20 bg-light rounded mt-40">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Remove
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MMELIDA</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
@@ -615,34 +626,31 @@ description: Helikon home page
                                 </button>
                             </div>
                         </div>
-                        <div class="vstack gap-14 p-20 border rounded mt-24">
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                        <div class="grid gap-14 p-20 border rounded mt-24">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Pineapplexpress</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack gap-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                <div class="hstack g-4">
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
                                 </div>
@@ -650,22 +658,20 @@ description: Helikon home page
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack gap-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                <div class="hstack g-4">
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
@@ -674,10 +680,10 @@ description: Helikon home page
                         </div>
                     </div>
                     <div
-                            class="tab-pane fade"
-                            id="polkadotModal"
-                            role="tabpanel"
-                            aria-labelledby="polkadotModal-tab">
+                        class="tab-pane fade"
+                        id="polkadotModal"
+                        role="tabpanel"
+                        aria-labelledby="polkadotModal-tab">
                         <div class="row gx-20">
                             <div class="col">
                                 <select class="form-select">
@@ -691,37 +697,33 @@ description: Helikon home page
                                 <button class="btn btn-primary w-100" type="button" disabled>
                                     Submitting
                                     <span
-                                            class="spinner-border spinner-border-sm"
-                                            role="status"
-                                            aria-hidden="true"></span>
+                                        class="spinner-border spinner-border-sm"
+                                        role="status"
+                                        aria-hidden="true"></span>
                                 </button>
                             </div>
                         </div>
-                        <div class="vstack gap-14 p-20 bg-light rounded mt-40">
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                        <div class="grid p-20 bg-light rounded mt-40" style="--bs-gap: 14px">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MELIDA</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Remove
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">🏔️ HELIKON 🏔️ / MMELIDA</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <img src="{{ "/assets/img/svg/check-fill.svg" | relative_url }}" alt="Check icon" />
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
@@ -729,34 +731,31 @@ description: Helikon home page
                                 </button>
                             </div>
                         </div>
-                        <div class="vstack gap-14 p-20 border rounded mt-24">
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                        <div class="grid p-20 border rounded mt-24" style="--bs-gap: 14px">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Pineapplexpress</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack gap-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                <div class="hstack g-4">
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/link-fill.svg" | relative_url }}" alt="Link icon" />
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
                                 </div>
@@ -764,22 +763,20 @@ description: Helikon home page
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">Name Validator</span>
-                                <div class="hstack gap-4">
-                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}"
-                                         alt="Blocks icon" />
+                                <div class="hstack g-4">
+                                    <img src="{{ "/assets/img/svg/blocks-fill.svg" | relative_url }}" alt="Blocks icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
                                 </button>
                             </div>
-                            <div class="hstack gap-14 gap-lg-20 align-items-center w-100 text-sm">
+                            <div class="g-col-12 hstack g-14 g-lg-20 align-items-center text-sm">
                                 <span class="flex-grow-1 text-truncate">PFkQ5QUklrY8tvcW</span>
-                                <div class="hstack gap-4">
+                                <div class="hstack g-4">
                                     <img src="{{ "/assets/img/svg/death-fill.svg" | relative_url }}" alt="Death icon" />
-                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}"
-                                         alt="No user icon" />
+                                    <img src="{{ "/assets/img/svg/nouser-fill.svg" | relative_url }}" alt="No user icon" />
                                 </div>
                                 <button class="btn btn-outline px-12 py-4 flex-shrink-0" type="button">
                                     Nominate
